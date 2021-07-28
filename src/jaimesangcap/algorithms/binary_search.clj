@@ -2,7 +2,10 @@
 
 (defn binary_search [items x]
   "Returns the index of x from the given items.
-  Returns nil when x is not found or items is nil or empty."
+  Returns nil when x is not found or items is nil or empty.
+
+  Time complexity: O(log n)
+  Space complexity: O(n) because of the number of items?"
   (loop [low 0
          high (dec (count items))]
     (when (<= low high)
